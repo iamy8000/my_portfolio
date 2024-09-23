@@ -41,25 +41,36 @@ const experienceData = [
     location: "Los Angeles, CA",
     period: "April 2024 - Present",
     responsibilities: [
-      "Develop and maintain responsive web applications using React and Next.js",
-      "Collaborate with UX designers to implement intuitive user interfaces",
-      "Optimize application performance, resulting in a 40% improvement in load times",
-      "Participate in code reviews and mentor junior developers"
+      "Developed APIs with Spring Boot and improved MySQL performance by refining queries and adding indexes, cutting response times by 15%.",
+      "Integrated Redis for caching and Elasticsearch for course search, boosting performance and functionality.",
+      "Designed a visually appealing and high-responsive front-end UI with Next.js and Material UI, enhancing user experience and engagement.",
+      "Optimized state management using Redux, cutting API calls by 30% and boosting data retrieval speed by 20%",
+      "Implemented a CI/CD pipeline with GitHub Actions, streamlining development and deployment efficiency.",
+      "Enhanced data management using Amazon RDS for transactional data and S3 for course media, balancing performance requirements with cost-effectiveness."
     ]
   },
 ];
 
-const SectionTitle = ({ title }) => (
-  <h2 className="font-serif text-2xl md:text-3xl mb-6 pb-2 border-b-2 border-emerald-500">
+
+const SectionTitle: React.FC<{ title: string }> = ({ title }) => (
+  <h2 className="font-serif text-2xl md:text-3xl mb-4 pb-2 border-b-2 border-sky-300">
     {title}
   </h2>
 );
 
-const EducationEntry = ({ degree, institution, location, year, details }) => (
+interface EducationEntryProps {
+  degree: string;
+  institution: string;
+  location: string;
+  year: string;
+  details: string[];
+}
+
+const EducationEntry: React.FC<EducationEntryProps> = ({ degree, institution, location, year, details }) => (
   <div className="mb-6">
     <h3 className="text-xl font-semibold">{degree}</h3>
-    <p className="text-lg">{institution}, {location}</p>
-    <p className="text-emerald-400">{year}</p>
+    <p className="text-lg mb-1">{institution}, {location}</p>
+    <p className="text-sky-300 mb-1">{year}</p>
     <ul className="space-y-1">
       {details.map((detail, index) => (
         <li key={index} className="text-white/70 pl-5 relative">
@@ -71,11 +82,19 @@ const EducationEntry = ({ degree, institution, location, year, details }) => (
   </div>
 );
 
-const ExperienceEntry = ({ position, company, location, period, responsibilities }) => (
+interface ExperienceEntryProps {
+  position: string;
+  company: string;
+  location: string;
+  period: string;
+  responsibilities: string[];
+}
+
+const ExperienceEntry: React.FC<ExperienceEntryProps> = ({ position, company, location, period, responsibilities }) => (
   <div className="mb-6">
     <h3 className="text-xl font-semibold">{position}</h3>
-    <p className="text-lg">{company}, {location}</p>
-    <p className="text-emerald-400">{period}</p>
+    <p className="text-lg mb-1">{company}, {location}</p>
+    <p className="text-sky-300 mb-1">{period}</p>
     <ul className="space-y-1">
       {responsibilities.map((responsibility, index) => (
         <li key={index} className="text-white/70 pl-5 relative">
@@ -87,7 +106,11 @@ const ExperienceEntry = ({ position, company, location, period, responsibilities
   </div>
 );
 
-export const EducationAndExperienceSection = ({id}:{id:string}) => {
+interface EducationAndExperienceSectionProps {
+  id: string;
+}
+
+export const EducationAndExperienceSection: React.FC<EducationAndExperienceSectionProps> = ({id}) => {
   return (
     <section id={id} className="py-16 lg:py-24">
       <div className="container">
@@ -97,17 +120,7 @@ export const EducationAndExperienceSection = ({id}:{id:string}) => {
           description="A comprehensive overview of my academic background and professional journey."
         />
         
-        <div className="text-center mb-12">
-          
-          {/* <h1 className="font-serif text-4xl md:text-5xl mb-4 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
-            Education & Experiences
-          </h1>
-          <p className="text-xl text-white/60 max-w-2xl mx-auto">
-            A comprehensive overview of my academic background and professional journey.
-          </p> */}
-        </div>
-        
-        <Card className="p-8 md:p-12">
+        <Card className="p-8 md:p-12 mt-14">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <SectionTitle title="Education" />

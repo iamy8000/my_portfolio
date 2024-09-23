@@ -2,7 +2,7 @@
 import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 import StarIcon from "@/assets/icons/star.svg";
-import bookImage from "@/assets/images/book-cover.png";
+import bookImage from "@/assets/images/book_cover.png";
 import Image from "next/image";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
@@ -11,8 +11,8 @@ import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
-import mapImage from "@/assets/images/map.png";
-import smileMemoji from "@/assets/images/memoji-smile.png";
+import mapImage from "@/assets/images/mymap.png";
+import smileMemoji from "@/assets/images/memoji_me.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
@@ -103,15 +103,15 @@ export const AboutSection = ({id}:{id:string}) => {
           description="Know about my skills, interests, and what inspires me."
         />
         
-        <div className="mt-20 flex flex-col gap-8 ">
+        <div className="mt-14 flex flex-col gap-8 ">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My Reads"
                 description="Explore the books shaping my perspectives."
               />
-              <div className="w-40 mx-auto mt-2 md:mt-0">
-                <Image src={bookImage} alt="Book cover" />
+              <div className="w-40 mx-auto mt-2 md:mt-0" style={{ width: '280px', height: '200px' }}>
+                <Image src={bookImage} alt="Book cover"/>
               </div>
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2">

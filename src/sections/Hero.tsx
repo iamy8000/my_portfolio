@@ -1,5 +1,5 @@
 'use client';
-import memojiImage from "@/assets/images/memoji-computer.png";
+import memojiImage from "@/assets/images/memoji-computer1.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
 import grainImage from "@/assets/images/grain.jpg";
@@ -80,13 +80,14 @@ export const HeroSection = ({id}:{id:string}) => {
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             {" "}
-            Hello, I'm Hsin-Yen Wu (Ian)
+            Hello, I&apos;m Hsin-Yen Wu (Ian)
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Hi, I'm a developer who loves building exceptional projects. I'm
-            passionate about creating distributed systems that are scalable and
-            reliable. Let's Connect and build something together!
+            Hi, I&apos;m a software developer who loves building exceptional projects! I&apos;m
+            passionate about distributed systems that are highly available, scalable and
+            reliable.
           </p>
+          <p className="mt-4 text-center text-white/90 md:text-xl font-serif"> Let&apos;s Connect and build something together!</p>
         </div>
         <div className="flex justify-center mt-8">
             <button
