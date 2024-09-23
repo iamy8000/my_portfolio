@@ -1,5 +1,6 @@
 import { Header } from "@/sections/Header";
 import { HeroSection } from "@/sections/Hero";
+import { EducationAndExperienceSection } from "@/sections/Experiences";
 import { ProjectsSection } from "@/sections/Projects";
 import { TapeSection } from "@/sections/Tape";
 import { AboutSection } from "@/sections/About";
@@ -11,9 +12,10 @@ export default function Home() {
     <div>
       <Header id="top"/>
       <HeroSection id="hero" />
+      <AboutSection id="about"/>
+      <EducationAndExperienceSection id="experiences"/>
       <ProjectsSection id ="projects" />
       <TapeSection />
-      <AboutSection id="about"/>
       <ContactSection id="contact"/>
       <Footer />
     </div>

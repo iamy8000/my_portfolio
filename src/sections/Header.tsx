@@ -20,16 +20,22 @@ export const Header = ({id}:{id:string}) => {
           Home
         </a>
         <a
-          onClick={() => scrollToSection("projects")}
-          className="nav-item cursor-pointer"
-        >
-          Projects
-        </a>
-        <a
           onClick={() => scrollToSection("about")}
           className="nav-item cursor-pointer"
         >
           About
+        </a>
+        <a
+          onClick={() => scrollToSection("experiences")}
+          className="nav-item cursor-pointer"
+        >
+          Experiences
+        </a>
+        <a
+          onClick={() => scrollToSection("projects")}
+          className="nav-item cursor-pointer"
+        >
+          Projects
         </a>
         <a
           onClick={() => scrollToSection("contact")}

@@ -17,6 +17,7 @@ import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import { EducationAndExperienceSection } from "./Experiences";
 
 const toolboxItems = [
   {
@@ -92,14 +93,16 @@ const hobbies = [
 
 export const AboutSection = ({id}:{id:string}) => {
   const constraintsRef = useRef(null);
+  
   return (
     <div id={id} className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
-          title="A Glimpse Into My World"
+          title=""
           eyebrow="About Me"
-          description="Learn more about who I am, what I do, and what inspires me."
+          description="More about my skills, interests, and what inspires me."
         />
+        
         <div className="mt-20 flex flex-col gap-8 ">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">

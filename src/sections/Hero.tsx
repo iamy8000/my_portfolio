@@ -1,3 +1,4 @@
+'use client';
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -10,6 +11,12 @@ export const HeroSection = ({id}:{id:string}) => {
   const maskStyle = {
     WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
     maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
+  };
+
+  const handleDownloadResume = () => {
+    // Replace with your actual resume file URL
+    const resumeUrl = "/documents/CV_HsinyenWu.pdf";
+    window.open(resumeUrl, '_blank');
   };
 
   return (
@@ -73,16 +80,23 @@ export const HeroSection = ({id}:{id:string}) => {
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
             {" "}
-            Building Exceptional Distributed Projects
+            Hello, I'm Hsin-Yen Wu (Ian)
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
             Hi, I'm a developer who loves building exceptional projects. I'm
             passionate about creating distributed systems that are scalable and
-            reliable. I'm currently available for new projects, so let's get in
-            touch!
+            reliable. Let's Connect and build something together!
           </p>
         </div>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
+        <div className="flex justify-center mt-8">
+            <button
+              onClick={handleDownloadResume}
+              className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full hover:from-emerald-600 hover:to-sky-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Download My Resume
+            </button>
+          </div>
+        {/* <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
@@ -91,7 +105,7 @@ export const HeroSection = ({id}:{id:string}) => {
             <span>👋</span>
             <span className="font-semibold">Let's Connect</span>
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
