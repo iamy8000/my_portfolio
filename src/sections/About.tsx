@@ -90,10 +90,10 @@ const hobbies = [
   },
 ];
 
-export const AboutSection = () => {
+export const AboutSection = ({id}:{id:string}) => {
   const constraintsRef = useRef(null);
   return (
-    <div className="py-20 lg:py-28">
+    <div id={id} className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           title="A Glimpse Into My World"
