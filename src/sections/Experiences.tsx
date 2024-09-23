@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card } from "@/components/Card";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const educationData = [
   {
     degree: "Master in Computer Science",
-    institution: "Northeastern",
+    institution: "Northeastern University",
     location: "Boston, MA",
     year: "2022 - Present",
     details: [
@@ -12,7 +13,25 @@ const educationData = [
       "Relevant coursework: Web Development, Data Structures, Algorithms, Database Systems"
     ]
   },
-  // Add more education entries as needed
+  {
+    degree: "Master in Chemical Oceanography",
+    institution: "National Taiwan University",
+    location: "Taipei, Taiwan",
+    year: "2019 - 2022",
+    details: [
+      "GPA: 3.9/4.0",
+    ]
+  },
+  {
+    degree: "Bachelor in Geosciences",
+    institution: "National Taiwan University",
+    location: "Taipei, Taiwan",
+    year: "2013 - 2017",
+    details: [
+      "GPA: 3.7/4.0",
+    ]
+  },
+  
 ];
 
 const experienceData = [
@@ -72,13 +91,20 @@ export const EducationAndExperienceSection = ({id}:{id:string}) => {
   return (
     <section id={id} className="py-16 lg:py-24">
       <div className="container">
+      <SectionHeader
+          title=""
+          eyebrow="Education & Experiences"
+          description="A comprehensive overview of my academic background and professional journey."
+        />
+        
         <div className="text-center mb-12">
-          <h1 className="font-serif text-4xl md:text-5xl mb-4 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+          
+          {/* <h1 className="font-serif text-4xl md:text-5xl mb-4 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
             Education & Experiences
           </h1>
           <p className="text-xl text-white/60 max-w-2xl mx-auto">
             A comprehensive overview of my academic background and professional journey.
-          </p>
+          </p> */}
         </div>
         
         <Card className="p-8 md:p-12">
