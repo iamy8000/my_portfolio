@@ -4,13 +4,31 @@ import { SectionHeader } from "@/components/SectionHeader";
 import StarIcon from "@/assets/icons/star.svg";
 import bookImage from "@/assets/images/book_cover.png";
 import Image from "next/image";
+import JavaIcon from "@/assets/icons/java.svg";
+import Python from "@/assets/icons/python.svg";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
 import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
+import NextJsIcon from "@/assets/icons/next-js.svg";
+import Redux from "@/assets/icons/redux.svg";
+import MongoDbIcon from "@/assets/icons/mongodb.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
+import AwsIcon from "@/assets/icons/aws.svg";
+import GCPIcon from "@/assets/icons/google-cloud.svg";
+import JenkinsIcon from "@/assets/icons/jenkins.svg";
+import DockerIcon  from "@/assets/icons/docker.svg";
+import K8sIcon from "@/assets/icons/kubernetes.svg";
+import Redis from "@/assets/icons/redis.svg";
+import Kafka from "@/assets/icons/kafka.svg";
+import RocketMQ from "@/assets/icons/rocketmq.svg";
+import Git from "@/assets/icons/git.svg";
+import Maven from "@/assets/icons/maven.svg";
+import Mysql from "@/assets/icons/mysql.svg";
+import Linux from "@/assets/icons/linux.svg";
+import Spring from "@/assets/icons/spring.svg";
 import mapImage from "@/assets/images/mymap.png";
 import smileMemoji from "@/assets/images/memoji_me.png";
 import { CardHeader } from "@/components/CardHeader";
@@ -20,6 +38,18 @@ import { useRef } from "react";
 import { EducationAndExperienceSection } from "./Experiences";
 
 const toolboxItems = [
+  {
+    title: "Java",
+    iconType: JavaIcon,
+  },
+  {
+    title: "Python",
+    iconType: Python,
+  },
+  {
+    title : "Linux",
+    iconType: Linux,
+  }, 
   {
     title: "Javascript",
     iconType: JavaScriptIcon,
@@ -37,13 +67,72 @@ const toolboxItems = [
     iconType: ReactIcon,
   },
   {
-    title: "Chrome",
-    iconType: ChromeIcon,
+    title: "Next.js",
+    iconType: NextJsIcon,
+  },
+  {
+    title: "Redux",
+    iconType: Redux,
+  },
+  {
+    title: "MongoDB",
+    iconType: MongoDbIcon,
+  },
+  {
+    title: "Spring",
+    iconType: Spring,
+  },
+
+  {
+    title: "AWS",
+    iconType: AwsIcon,
+  },
+  {
+    title: "GCP",
+    iconType: GCPIcon,
+  },
+  {
+    title: "Jenkins",
+    iconType: JenkinsIcon,
   },
   {
     title: "Github",
     iconType: GithubIcon,
   },
+  {
+    title: "Docker",
+    iconType: DockerIcon,
+  },
+  {
+    title: "Kubernetes",
+    iconType: K8sIcon,
+  },
+  {
+    title: "Redis",
+    iconType: Redis,
+  },
+  {
+    title: "Kafka",
+    iconType: Kafka,
+  },
+  {
+    title: "RocketMQ",
+    iconType: RocketMQ,
+  },
+  {
+    title: "Git",
+    iconType: Git,
+  },
+  {
+    title: "Maven",
+    iconType: Maven,
+  },
+  {
+    title: "MySQL",
+    iconType: Mysql,
+  },
+  
+ 
 ];
 
 const hobbies = [
@@ -123,12 +212,12 @@ export const AboutSection = ({id}:{id:string}) => {
               <ToolboxItems
                 items={toolboxItems}
                 className=""
-                itemsWrapperClassName="animate-move-left [animation-duration:15s]"
+                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
               />
               <ToolboxItems
                 items={toolboxItems}
                 className="mt-6"
-                itemsWrapperClassName="animate-move-right [animation-duration:15s]"
+                itemsWrapperClassName="animate-move-right [animation-duration:30s]"
               />
             </Card>
           </div>
