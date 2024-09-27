@@ -207,7 +207,7 @@ export const AboutSection = ({ id }: { id: string }) => {
               <h2 className="text-2xl font-bold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text mb-2 ">About Me</h2>
               <div className="space-y-4 text-gray-200 font-semibold">
                 <p>
-                  I am a Master's student in Computer Science at Northeastern University, Class of 2025, actively
+                  I am a Master&apos;s student in Computer Science at Northeastern University, Class of 2025, actively
                   seeking a junior software engineer position. I am passionate about building robust, scalable, high-
                   performance distributed systems. Currently, as a Software Engineer Intern at AI Roboto Edu, I
                   develop and optimize scalable frontend and backend systems to enhance performance, security,

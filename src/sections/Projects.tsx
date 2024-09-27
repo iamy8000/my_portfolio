@@ -180,13 +180,13 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                   </ul>
                   <a href={project.link}>
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300">
-                      <span>Visit Live Site</span>
+                      <span>Learn More</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
-                    <button className="bg-white text-gray-950 ml-5 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300">
+                    {/* <button className="bg-white text-gray-950 ml-5 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300">
                       <span>Github Repo</span>
                       <ArrowUpRightIcon className="size-4" />
-                    </button>
+                    </button> */}
                   </a>
                 </div >
                 <div className="flex justify-center items-center mt-10 lg:mt-2 lg:mb-8">
