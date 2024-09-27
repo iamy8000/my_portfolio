@@ -1,6 +1,9 @@
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import shopImage from "@/assets/images/shop.jpeg";
+import KanbasImage from "@/assets/images/Kanbas.png";
+import KVStorage from "@/assets/images/kvstorage.jpeg";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -21,6 +24,7 @@ const portfolioProjects = [
       "MySQL",
       "Redis",
       "Message Queues",
+      "AWS",
       "Webpack",
       "Distributed Transactions",
     ],
@@ -36,7 +40,7 @@ const portfolioProjects = [
       { title: "Implemented dynamic resource loading" },
     ],
     link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    image: shopImage,
   },
   {
     company: "Distributed System",
@@ -46,9 +50,11 @@ const portfolioProjects = [
       "A high-performance distributed Key-Value storage system built in Java, leveraging the Raft consensus algorithm to achieve strong consistency and high availability. This project demonstrates advanced distributed systems concepts, optimizations, and my ability to design scalable, fault-tolerant systems that maintain data integrity even in challenging network conditions.",
     technology: [
       "Java",
-      "Raft Consensus",
+      "Raft Consensus Algorithm",
       "Distributed Systems",
-      "WAL",
+      "WriteAhead Log",
+      "Consistent Hashing",
+      "RPC",
       "Docker",
       "Kubernetes",
     ],
@@ -70,11 +76,11 @@ const portfolioProjects = [
       { title: "Engineered dynamic data partitioning for load balancing" },
     ],
     link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    image: KVStorage,
   },
   {
     company: "Mern Stack Project",
-    year: "2023",
+    year: "2024",
     title: "Kanbas Course Management System",
     introduction:
       "A comprehensive educational platform built with React, Redux, and MongoDB, designed to streamline course management and registration for students and faculty. This project showcases my full-stack development skills, focusing on creating a scalable, user-friendly system with robust backend functionality.",
@@ -87,16 +93,29 @@ const portfolioProjects = [
       "Material-UI",
     ],
     results: [
-      { title: "Developed a seamless course management interface with React and Redux" },
-      { title: "Engineered a scalable multi-session backend using Node.js and Express.js" },
-      { title: "Created automatic grading functionality to enhance efficiency" },
+      {
+        title:
+          "Developed a seamless course management interface with React and Redux",
+      },
+      {
+        title:
+          "Engineered a scalable multi-session backend using Node.js and Express.js",
+      },
+      {
+        title: "Created automatic grading functionality to enhance efficiency",
+      },
       { title: "Designed and implemented RESTful APIs for data management" },
       { title: "Optimized for real-time course creation and updates" },
-      { title: "Deployed application across Netlify, Render, and MongoDB Atlas" },
-      { title: "Streamlined course registration process for students and faculty" }
+      {
+        title: "Deployed application across Netlify, Render, and MongoDB Atlas",
+      },
+      {
+        title:
+          "Streamlined course registration process for students and faculty",
+      },
     ],
     link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    image: KanbasImage,
   },
 ];
 
@@ -129,7 +148,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                 top: `calc(64px + ${projectIndex * 40}px`,
               }}
             >
-              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+              <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
                 <div className="lg:pb-16">
                   <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">
                     <span>{project.company}</span>
@@ -152,7 +171,7 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                     {project.results.map((result) => (
                       <li
                         key={result.title}
-                        className="flex gap-2 text-sm md:text-base text-white/50"
+                        className="flex gap-2 text-sm md:text-base text-white/100 font-serif"
                       >
                         <CheckCircleIcon className="size-5 md:size-6" />
                         <span>{result.title}</span>
@@ -169,15 +188,21 @@ export const ProjectsSection = ({ id }: { id: string }) => {
                       <ArrowUpRightIcon className="size-4" />
                     </button>
                   </a>
+                </div >
+                <div className="flex justify-center items-center mt-10 lg:mt-2 lg:mb-8">
+                <div className="relative w-full h-0 pb-[139%] rounded-3xl overflow-hidden">
+                    {/* Fixed size container */}
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-3xl"
+                    />
+                  </div>
+                  </div>
                 </div>
-                <div className="relative">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
-                  />
-                </div>
-              </div>
+              
             </Card>
           ))}
         </div>
