@@ -4,53 +4,72 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const educationData = [
   {
-    degree: "Master in Computer Science",
-    institution: "Northeastern University",
-    location: "Boston, MA",
-    year: "2022 - Present",
+    degree: "Master of Information Management",
+    institution: "University of Maryland",
+    location: "College Park, MD",
+    year: "2022 - 2024",
     details: [
-      "GPA: 3.8/4.0",
-      "Relevant coursework: Web Development, Data Structures, Algorithms, Database Systems"
+      "Relevant coursework: Web Development, Database Design, Data Science, Machine Learning, Natural Language Processing",
     ]
   },
   {
-    degree: "Master in Chemical Oceanography",
-    institution: "National Taiwan University",
-    location: "Taipei, Taiwan",
-    year: "2019 - 2022",
-    details: [
-      "GPA: 3.9/4.0",
-    ]
-  },
-  {
-    degree: "Bachelor in Geosciences",
-    institution: "National Taiwan University",
+    degree: "Bachelor of Arts in Advertising and Public Relations",
+    institution: "Fu Jen Catholic University",
     location: "Taipei, Taiwan",
     year: "2013 - 2017",
     details: [
-      "GPA: 3.7/4.0",
+      // "GPA: 3.2/4.0",
     ]
   },
-  
 ];
 
 const experienceData = [
   {
-    position: "Full Stack Engineer Intern",
-    company: "AI Roboto Edu",
-    location: "Los Angeles, CA",
-    period: "April 2024 - Present",
+    position: "Frontend Engineer Intern",
+    company: "Tymeline",
+    location: "Remote",
+    period: "Aug 2024 – Present",
     responsibilities: [
-      "Developed APIs with Spring Boot and improved MySQL performance by refining queries and adding indexes, cutting response times by 15%.",
-      "Integrated Redis for caching and Elasticsearch for course search, boosting performance and functionality.",
-      "Designed a visually appealing and high-responsive front-end UI with Next.js and Material UI, enhancing user experience and engagement.",
-      "Optimized state management using Redux, cutting API calls by 30% and boosting data retrieval speed by 20%",
-      "Implemented a CI/CD pipeline with GitHub Actions, streamlining development and deployment efficiency.",
-      "Enhanced data management using Amazon RDS for transactional data and S3 for course media, balancing performance requirements with cost-effectiveness."
+      "Built and styled dynamic UI components for an AI-powered performance and project management platform using React.js and MUI.",
+      "Integrated React Hook Form and Playwright to enhance form handling and test automation across features.",
+      "Created CI/CD workflows via GitHub Actions for end-to-end deployment automation.",
+      "Collaborated with product and backend teams to ensure seamless integration and delivery of platform features."
+    ]
+  },
+  {
+    position: "Software Engineer Intern",
+    company: "IpserLab",
+    location: "Remote",
+    period: "Jul 2024 – Present",
+    responsibilities: [
+      "Developed responsive UI for a video conferencing platform, ensuring cross-browser compatibility and performance optimization.",
+      "Created and enhanced key features such as the enrich conversation page and image update logic within conversation details.",
+      "Worked with Redux to manage complex application state and integrated APIs for real-time updates."
+    ]
+  },
+  {
+    position: "Teaching Assistant",
+    company: "University of Maryland",
+    location: "College Park, MD",
+    period: "Sep 2023 – May 2024",
+    responsibilities: [
+      "Assisted in teaching undergraduate-level courses on python programming and object-oriented programming.",
+      "Hosted office hours, reviewed student assignments, and provided detailed feedback to reinforce learning outcomes.",
+      "Collaborated with professors to refine course content and grading rubrics, enhancing clarity and alignment with course objectives."
+    ]
+  },
+  {
+    position: "Frontend Engineer",
+    company: "Tagnology",
+    location: "Remote",
+    period: "Aug 2021 – Feb 2023",
+    responsibilities: [
+      "Led front-end development for Taiwan’s first blockchain marketplace using React.js and Next.js, improving transaction speed by 90%.",
+      "Created an interactive product customization canvas using Konva.js, enhancing UI flexibility for end users.",
+      "Implemented NFT trading features with Ethereum Web3 and Ethers.js, and managed multilingual content with i18next."
     ]
   },
 ];
-
 
 const SectionTitle: React.FC<{ title: string }> = ({ title }) => (
   <h2 className="font-serif text-2xl md:text-3xl mb-4 pb-2 border-b-2 border-sky-300">
@@ -110,7 +129,7 @@ interface EducationAndExperienceSectionProps {
   id: string;
 }
 
-export const EducationAndExperienceSection: React.FC<EducationAndExperienceSectionProps> = ({id}) => {
+export const EducationAndExperienceSection: React.FC<EducationAndExperienceSectionProps> = ({ id }) => {
   return (
     <section id={id} className="py-16 lg:py-24">
       <div className="container">
@@ -128,7 +147,7 @@ export const EducationAndExperienceSection: React.FC<EducationAndExperienceSecti
                 <EducationEntry key={index} {...edu} />
               ))}
             </div>
-            
+
             <div>
               <SectionTitle title="Professional Experiences" />
               {experienceData.map((exp, index) => (

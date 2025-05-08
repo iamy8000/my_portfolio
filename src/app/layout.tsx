@@ -12,7 +12,7 @@ const calistoga = Calistoga({
 });
 
 export const metadata: Metadata = {
-  title: "Hsin-Yen Wu's Portfolio",
+  title: "Yating Yang's Portfolio",
   description: "Created with the help of Frontend Tribe",
   icons: {
     icon: "/favicon2c.png", // Ensure this path is correct

@@ -192,43 +192,37 @@ export const AboutSection = ({ id }: { id: string }) => {
         />
 
         <div className="mt-14 flex flex-col gap-8 ">
-        <Card className="overflow-hidden">
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/3 relative h-[300px] md:h-auto">
-              <Image
-                src={MyPhoto}
-                alt="My photo"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
-              />
-            </div>
-            <div className="md:w-2/3 p-6 md:p-8">
-              <h2 className="text-2xl font-bold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text mb-2 ">About Me</h2>
-              <div className="space-y-4 text-gray-200 font-semibold">
-                <p>
-                  I am a Master&apos;s student in Computer Science at Northeastern University, Class of 2025, actively
-                  seeking a junior software engineer position. I am passionate about building robust, scalable, high-
-                  performance distributed systems. Currently, as a Software Engineer Intern at AI Roboto Edu, I
-                  develop and optimize scalable frontend and backend systems to enhance performance, security,
-                  and efficiency for an online educational platform.
-                </p>
-                <p>
-                  Driven by a fascination with creating efficient systems, I have hands-on experience with distributed
-                  systems, leveraging CI/CD pipelines and cloud technologies. I developed a high-performance
-                  online gaming platform using Spring Boot and Webpack, optimizing for concurrent processing and caching.
-                  I created a distributed key-value storage system, achieving 20,000 QPS with Raft
-                  consensus and consistent hashing.
-                </p>
-                <p>
-                  Outside of work, I am an avid traveler, tennis lover, and photographer, having backpacked to 22 countries,
-                  immersing myself in diverse cultures and cuisines. I am proficient in Mandarin, with conversational skills
-                  in Spanish and Japanese.
-                </p>
+          <Card className="overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/3 relative h-[300px] md:h-auto">
+                <Image
+                  src={MyPhoto}
+                  alt="My photo"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+                />
+              </div>
+              <div className="md:w-2/3 p-6 md:p-8">
+                <h2 className="text-2xl font-bold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text mb-2 ">About Me</h2>
+                <div className="space-y-4 text-gray-200 font-semibold">
+                  <p>
+                    I'm a front-end engineer with hands-on experience across startups and academic projects, passionate about crafting intuitive and scalable web applications. I hold a Master's degree in Information Management from the University of Maryland and have led front-end development for AI-integrated platforms, blockchain marketplaces, and real-time video conferencing tools.
+                  </p>
+                  <p>
+                    I specialize in React.js, TypeScript, Redux, and modern frontend architecture. During my time at Tymeline, I built reusable components, implemented end-to-end tests with Playwright, and automated CI/CD workflows with GitHub Actions. At Tagnology, I developed interactive canvas features, launched an NFT marketplace with Ethereum Web3 integration, and improved performance using Next.js.
+                  </p>
+                  <p>
+                    I'm also deeply curious about the intersection of frontend engineering and AI. At IpserLab, I built dynamic UIs for video conferencing features and enriched chat experiences, improving both usability and reliability. I’ve led projects from scratch, collaborated with backend teams, and enjoy solving design-to-code and data-flow challenges.
+                  </p>
+                  <p>
+                    Beyond code, I’m a cat person, traveler, and lifelong learner. I enjoy exploring emerging tech, creating clean UI experiences, and working in teams that value curiosity and impact.
+                  </p>
+                </div>
+
               </div>
             </div>
-          </div>
-        </Card>
+          </Card>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader

@@ -7,7 +7,7 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 
-export const HeroSection = ({id}:{id:string}) => {
+export const HeroSection = ({ id }: { id: string }) => {
   const maskStyle = {
     WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
     maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
@@ -29,7 +29,7 @@ export const HeroSection = ({id}:{id:string}) => {
         <div className="size-[620px] hero-ring"></div>
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
-        <div className="size-[1220px] hero-ring"></div>   
+        <div className="size-[1220px] hero-ring"></div>
         <HeroOrbit size={430} rotation={-14} shouldOrbit orbitDuration="30s" shouldSpin spinDuration="3s">
           <SparkleIcon className="size-8 text-emerald-300/20" />
         </HeroOrbit>
@@ -79,24 +79,23 @@ export const HeroSection = ({id}:{id:string}) => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            {" "}
-            Hello, I&apos;m Hsin-Yen Wu (Ian)
+            Hello, I&apos;m Yating Yang
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Hi, I&apos;m a software developer who loves building exceptional projects! I&apos;m
-            passionate about distributed systems that are highly available, scalable and
-            reliable.
+            I’m a front-end engineer with a passion for creating intuitive, high-impact digital experiences. With hands-on experience in startups and academic projects, I build responsive and scalable web applications using React, TypeScript, and modern frontend architecture.
           </p>
-          <p className="mt-4 text-center text-white/90 md:text-xl font-serif"> Let&apos;s Connect and build something together!</p>
+          <p className="mt-4 text-center text-white/90 md:text-xl font-serif">
+            Let&apos;s connect and turn ideas into real-world products!
+          </p>
         </div>
         <div className="flex justify-center mt-8">
-            <button
-              onClick={handleDownloadResume}
-              className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full hover:from-emerald-600 hover:to-sky-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              Download My Resume
-            </button>
-          </div>
+          <button
+            onClick={handleDownloadResume}
+            className="px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full hover:from-emerald-600 hover:to-sky-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            Download My Resume
+          </button>
+        </div>
         {/* <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
             <span className="font-semibold">Explore My Work</span>

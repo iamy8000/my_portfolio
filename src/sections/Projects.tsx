@@ -13,110 +13,116 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
-    company: "Full-Stack Project",
+    company: "Augmented Reality App",
     year: "2024",
-    title: "High Performance Gaming Platform",
+    title: "Unity-Based AR Productivity Companion",
     introduction:
-      "A robust gaming platform built with Spring Boot, showcasing scalability and high performance. This project demonstrates my ability to develop complex systems that can handle significant user loads while maintaining speed and efficiency. It incorporates modern technologies and best practices in backend development, database management, and frontend optimization.",
+      "An immersive productivity mobile application built with Unity, blending interactive 3D characters with real-world context. The app adapts to the user’s local time and environment while supporting focus features like countdown timers and distraction pop-ups.",
     technology: [
-      "Java",
-      "Spring Boot",
-      "MySQL",
-      "Redis",
-      "Message Queues",
+      "Unity",
+      "C#",
+      "TextMeshPro",
+      "Spline",
+      "Mixamo",
+      "AR Foundation"
+    ],
+    results: [
+      { title: "Created animated 3D scenes with dynamic lighting based on local time" },
+      { title: "Implemented countdown timers and pop-up modals to enhance focus" },
+      { title: "Built pinch-to-zoom and drag-to-position AR object functionality" },
+      { title: "Integrated spline and Mixamo assets to enable character movement" },
+      { title: "Designed flexible UI transitions with TextMeshPro and touch events" }
+    ],
+    link: "",
+    image: lightSaasLandingPage,
+  },
+  {
+    company: "Cloud Security Architecture",
+    year: "2024",
+    title: "AWS Healthcare Infrastructure Design",
+    introduction:
+      "Designed a secure, HIPAA-compliant infrastructure for healthcare systems using AWS, with a focus on zero-trust principles and secure inter-VPC communication.",
+    technology: [
       "AWS",
-      "Webpack",
-      "Distributed Transactions",
+      "IAM",
+      "VPC Peering",
+      "AWS WAF",
+      "Amazon RDS",
+      "Network Firewall"
     ],
     results: [
-      { title: "Scaled to support 10,000 concurrent users" },
-      { title: "Achieved 3,000 transactions per second" },
-      { title: "Reduced P99 latency to under 1 second" },
-      { title: "Implemented multi-method secure authentication" },
-      { title: "Optimized data storage with sharding and partitioning" },
-      { title: "Improved data retrieval speed with Redis caching" },
-      { title: "Enabled seamless distributed session management" },
-      { title: "Enhanced frontend performance with Webpack" },
-      { title: "Implemented dynamic resource loading" },
+      { title: "Implemented VPC segmentation and peering for access control" },
+      { title: "Integrated AWS WAF and Network Firewall for traffic inspection" },
+      { title: "Achieved HIPAA-aligned design using zero-trust architecture" },
+      { title: "Encrypted RDS data for secure transactional operations" }
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
+    link: "",
+    image: darkSaasLandingPage,
+  },
+  {
+    company: "Android App Challenge",
+    year: "2021",
+    title: "AI-Powered Nutrition Tracker",
+    introduction:
+      "Built an Android app to track dietary intake with machine learning capabilities, enabling users to identify food and calculate nutrition on-the-go.",
+    technology: [
+      "Kotlin",
+      "Firebase ML Kit",
+      "Android Studio",
+      "Google Cloud",
+      "Machine Learning"
+    ],
+    results: [
+      { title: "Recognized top 100 foods using pretrained Firebase ML Kit models" },
+      { title: "Implemented calorie and macro tracking with custom logic" },
+      { title: "Worked in a team of 5 for development and UI/UX" },
+      { title: "Participated in Google’s 2021 Solution Challenge" }
+    ],
+    link: "",
+    image: aiStartupLandingPage,
+  },
+  {
+    company: "Business Intelligence",
+    year: "2023",
+    title: "Career Services BI Database",
+    introduction:
+      "Designed and built a relational database from the ground up for the Office of Career Services, transitioning from Excel-based reports to an optimized MySQL system.",
+    technology: [
+      "MySQL",
+      "ER Modeling",
+      "Normalization",
+      "Database Design"
+    ],
+    results: [
+      { title: "Reduced data query time from 10 to 2 minutes" },
+      { title: "Normalized database to 3NF for data integrity and scalability" },
+      { title: "Designed schema with over 25 interrelated tables" }
+    ],
+    link: "",
+    image: grainImage,
+  },
+  {
+    company: "Student Marketplace",
+    year: "2022",
+    title: "UMD Virtual Marketplace Platform",
+    introduction:
+      "Developed a responsive web application for UMD students to buy and sell furniture, improving student life through peer-to-peer commerce.",
+    technology: [
+      "React.js",
+      "Flask",
+      "MySQL",
+      "JavaScript",
+      "Figma",
+      "RESTful APIs"
+    ],
+    results: [
+      { title: "Decreased page load time by 20% with optimized RESTful APIs" },
+      { title: "Improved search efficiency by 30% with refined filtering logic" },
+      { title: "Engaged 500+ students within the first month of launch" }
+    ],
+    link: "",
     image: shopImage,
-  },
-  {
-    company: "Distributed System",
-    year: "2024",
-    title: "Distributed KV Storage System",
-    introduction:
-      "A high-performance distributed Key-Value storage system built in Java, leveraging the Raft consensus algorithm to achieve strong consistency and high availability. This project demonstrates advanced distributed systems concepts, optimizations, and my ability to design scalable, fault-tolerant systems that maintain data integrity even in challenging network conditions.",
-    technology: [
-      "Java",
-      "Raft Consensus Algorithm",
-      "Distributed Systems",
-      "WriteAhead Log",
-      "Consistent Hashing",
-      "RPC",
-      "Docker",
-      "Kubernetes",
-    ],
-    results: [
-      { title: "Achieved 20,000 QPS for 4KB mixed read/write operations" },
-      { title: "Maintained P99 latency of 800ms" },
-      { title: "Implemented Raft consensus for strong consistency" },
-      { title: "Enabled seamless horizontal scaling with consistent hashing" },
-      {
-        title:
-          "Optimized read performance with asynchronous Apply, ReadIndex, and FollowerRead. ",
-      },
-      {
-        title:
-          "Reduced unnecessary leader elections by 80% by implememting Prevote mechanisms",
-      },
-      { title: "Decreased deployment time by 95% with containerization" },
-      { title: "Reduced system downtime by 90% through automated failover" },
-      { title: "Engineered dynamic data partitioning for load balancing" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: KVStorage,
-  },
-  {
-    company: "Mern Stack Project",
-    year: "2024",
-    title: "Kanbas Course Management System",
-    introduction:
-      "A comprehensive educational platform built with React, Redux, and MongoDB, designed to streamline course management and registration for students and faculty. This project showcases my full-stack development skills, focusing on creating a scalable, user-friendly system with robust backend functionality.",
-    technology: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Redux",
-      "Material-UI",
-    ],
-    results: [
-      {
-        title:
-          "Developed a seamless course management interface with React and Redux",
-      },
-      {
-        title:
-          "Engineered a scalable multi-session backend using Node.js and Express.js",
-      },
-      {
-        title: "Created automatic grading functionality to enhance efficiency",
-      },
-      { title: "Designed and implemented RESTful APIs for data management" },
-      { title: "Optimized for real-time course creation and updates" },
-      {
-        title: "Deployed application across Netlify, Render, and MongoDB Atlas",
-      },
-      {
-        title:
-          "Streamlined course registration process for students and faculty",
-      },
-    ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: KanbasImage,
-  },
+  }
 ];
 
 export const ProjectsSection = ({ id }: { id: string }) => {
